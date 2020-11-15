@@ -6,6 +6,7 @@ OCR API implemented with flask
 ### Usage
 
 ```bash
+cd ocr_flask
 ./run.sh
 ```
 
