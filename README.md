@@ -11,29 +11,31 @@ cd ocr_flask
 ```
 
 ##### process (all)
+
 ```bash
 curl -XPOST "http://localhost:5000/image-sync" \
--d @encoded/encode.json
+-d '{"image_data": "<b64 encoded image>"}'
 ```
 or
 ```bash
 curl -XPOST "http://localhost:5000/image-sync" \
--d '{"image_data": "<b64 encoded image>"}'
+-d @encoded/encode.json
 ```
 
 ##### process (image to task id)
 
 ```bash
 curl -XPOST "http://localhost:5000/image" \
+-d '{"image_data": "<b64 encoded image>"}'
+```
+or 
+```bash
+curl -XPOST "http://localhost:5000/image" \
 -d @encoded/encode.json
 ```
 
-or 
 
-```bash
-curl -XPOST "http://localhost:5000/image" \
--d '{"image_data": "<b64 encoded image>"}'
-```
+
 
 ##### process (task id to text)
  
