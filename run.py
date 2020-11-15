@@ -1,10 +1,8 @@
 from flask import Flask, jsonify
 from api import api
 
-# Flask本体
 app = Flask(__name__)
 
-# Blueprint登録
 app.register_blueprint(api)
 
 
