@@ -1,0 +1,5 @@
+Pillow
+pytesseract
+flask
+flask_sqlalchemy
+click
