@@ -9,7 +9,7 @@ text_db = {}
 
 
 @api.route("/image-sync", methods=["POST"])
-def process_all():
+def process_sync():
     data = request.get_json(force=True)
     img_stream = io.BytesIO(base64.b64decode(data["image_data"]))
     img_stream = Image.open(img_stream)
@@ -19,7 +19,7 @@ def process_all():
 
 
 @api.route("/image", methods=["POST", "GET"])
-def process():
+def process_async():
     data = request.get_json(force=True)
     if request.method == "POST":
         # convert image to text
