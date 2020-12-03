@@ -55,6 +55,11 @@ curl -XGET "http://localhost:5000/async-process" -d '{"task_id": "<task id as re
 ```
 
 # Example result
+
+##### サンプル画像
+
+![サンプル画像](images/sample.tif "sample.tif")
+
 ```bash
 $ curl -XPOST "http://localhost:5000/sync-process" -d @encoded/encode.json
 {
