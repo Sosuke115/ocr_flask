@@ -8,7 +8,7 @@ api = Blueprint("api", __name__)
 text_db = {}
 
 
-@api.route("/image-sync", methods=["POST"])
+@api.route("/sync-process", methods=["POST"])
 def process_sync():
     data = request.get_json(force=True)
     img_stream = io.BytesIO(base64.b64decode(data["image_data"]))
@@ -18,7 +18,7 @@ def process_sync():
     return jsonify(result)
 
 
-@api.route("/image", methods=["POST", "GET"])
+@api.route("/async-process", methods=["POST", "GET"])
 def process_async():
     data = request.get_json(force=True)
     if request.method == "POST":
