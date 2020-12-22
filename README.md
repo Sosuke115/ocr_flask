@@ -20,11 +20,6 @@ docker run --rm -it -d -v $(pwd):/work -w /work --name image_encoder -p 8080:808
 docker run -it -d -v $(pwd):/work -w /work --name ocr_server -p 5000:5000 ocr_server sh -c "python run.py"
 ```
 
-<!-- ```bash
-cd ocr_flask
-./run.sh
-``` -->
-
 ##### process (all)
 
 ```bash
